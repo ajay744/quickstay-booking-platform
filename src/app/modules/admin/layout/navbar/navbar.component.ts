@@ -21,6 +21,6 @@ export class NavbarComponent {
   logout(): void {
     this.tokenService.clearToken();
     this.snackbar.info('You have been logged out successfully.');
-    this.router.navigate(['/owner/login'], { replaceUrl: true });
+    this.router.navigate(['/admin/login'], { replaceUrl: true });
   }
 }

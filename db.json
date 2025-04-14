@@ -210,7 +210,7 @@
     {
       "id": "3983",
       "name": "naitik ",
-      "email": "naitik@gmail.com",
+      "email": "admin@gmail.com",
       "phone": "1234567891",
       "password": "123456",
       "role": "admin"
@@ -238,6 +238,14 @@
       "phone": "15478965485",
       "password": "123456",
       "role": "user"
+    },
+    {
+      "id": "ba8a",
+      "name": "ajay",
+      "email": "owner@gmail.com",
+      "phone": "9644721884",
+      "password": "123456",
+      "role": "owner"
     }
   ],
   "boysPg": [
