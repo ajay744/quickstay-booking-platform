@@ -52,19 +52,5 @@ export class GirlsPgComponent implements OnInit {
   get filteredPgList(): GirlsPg[] {
     return this.pgService.filterAndSortPgList(this.pgList, this.searchText, this.sortOption);
   }
-    // bookPgrazorpa(pg: any): void {
-  //   this.razorpayService.openPaymentGateway(pg, (response) => {
-  //     if (response && response.razorpay_payment_id) {
-  //       // Payment was successful
-  //       this.snackbar.success('PG booked successfully! Payment ID: ' + response.razorpay_payment_id, 4000);
-  
-  //       // Optional: Save to DB
-  //       // this.pgService.saveBooking(pg, response).subscribe(...);
-  
-  //     } else {
-  //       // Fallback if response is malformed
-  //       this.snackbar.warn('Payment response invalid. Please contact support.', 4000);
-  //     }
-  //   });
-  // }
+
 }

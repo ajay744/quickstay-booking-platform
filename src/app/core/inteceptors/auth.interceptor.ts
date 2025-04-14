@@ -51,29 +51,29 @@ export class AuthInterceptor implements HttpInterceptor {
     let errorMessage = '❌ An unknown error occurred';
 
     if (error.error instanceof ErrorEvent) {
-      errorMessage = `⚠️ Client Error: ${error.error.message}`;
+      errorMessage = ` Client Error: ${error.error.message}`;
     } else {
       switch (error.status) {
         case 0:
-          errorMessage = '🚫 No connection. Please check your network.';
+          errorMessage = ' No connection. Please check your network.';
           break;
         case 400:
-          errorMessage = '⚠️ Bad Request';
+          errorMessage = ' Bad Request';
           break;
         case 401:
-          errorMessage = '🔐 Unauthorized. Please login again.';
+          errorMessage = ' Unauthorized. Please login again.';
           break;
         case 403:
-          errorMessage = '🚫 Access Denied.';
+          errorMessage = ' Access Denied.';
           break;
         case 404:
-          errorMessage = '❓ Resource Not Found';
+          errorMessage = ' Resource Not Found';
           break;
         case 500:
-          errorMessage = '💥 Internal Server Error';
+          errorMessage = ' Internal Server Error';
           break;
         default:
-          errorMessage = `❌ Error ${error.status}: ${error.message}`;
+          errorMessage = ` Error ${error.status}: ${error.message}`;
       }
     }
 
