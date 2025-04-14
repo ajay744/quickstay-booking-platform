@@ -1,0 +1,33 @@
+<div class="login-container">
+    <mat-card class="login-card">
+      <h2 class="login-title">Owner Login</h2>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" [(ngModel)]="email" placeholder="Enter your email" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [(ngModel)]="password" placeholder="Enter your password" />
+      </mat-form-field>
+  
+      <div class="error-message" *ngIf="errorMessage">
+        {{ errorMessage }}
+      </div>
+  
+      <button mat-raised-button color="primary" class="login-button" (click)="login()">
+        Login
+      </button>
+  
+      <div class="login-hint">
+        <p>Use <strong>owner@example.com</strong> / <strong>123456</strong> to login</p>
+      </div>
+  
+      <div class="signup-link">
+        <span>Don't have an account?</span>
+        <a (click)="goToSignup()">Sign up</a>
+      </div>
+    </mat-card>
+  </div>
+  

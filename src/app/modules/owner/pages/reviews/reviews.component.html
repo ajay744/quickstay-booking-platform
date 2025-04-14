@@ -1,0 +1,22 @@
+<div class="reviews-container">
+    <h2>Tenant Reviews</h2>
+  
+    <mat-card *ngFor="let review of reviews" class="review-card">
+      <div class="review-header">
+        <img [src]="review.avatar" alt="{{ review.name }}" class="avatar" />
+        <div>
+          <h4>{{ review.name }}</h4>
+          <p class="review-date">{{ review.date }}</p>
+        </div>
+      </div>
+  
+      <div class="stars">
+        <mat-icon *ngFor="let star of [1,2,3,4,5]" color="accent">
+          {{ star <= review.rating ? 'star' : 'star_border' }}
+        </mat-icon>
+      </div>
+  
+      <p class="comment">“{{ review.comment }}”</p>
+    </mat-card>
+  </div>
+  

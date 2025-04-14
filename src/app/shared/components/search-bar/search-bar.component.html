@@ -1,0 +1,20 @@
+<div class="search-bar">
+    <input
+    type="text"
+    [placeholder]="placeholder"
+    [value]="searchText"
+    (input)="handleInput($event)"
+  />
+  
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Sort By</mat-label>
+      <mat-select [value]="sortOption" (selectionChange)="onSortChange($event.value)">
+        <mat-option value="">Default</mat-option>
+        <mat-option value="low">Rent: Low to High</mat-option>
+        <mat-option value="high">Rent: High to Low</mat-option>
+        <mat-option value="popular">Most Popular</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  

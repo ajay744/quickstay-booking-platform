@@ -1,0 +1,78 @@
+<div class="view-details-container" *ngIf="pgData">
+    <div class="property-header">
+      <div class="property-image">
+        <img [src]="pgData.image" alt="{{ pgData.name }}" />
+      </div>
+      <div class="property-info">
+        <h1>{{ pgData.name }}</h1>
+        <h3>{{ pgData.city }}</h3>
+      </div>
+    </div>
+  
+    <!-- Property Info Section -->
+    <div class="pg-info">
+      <mat-chip-set class="info-item">
+        <mat-chip color="primary" *ngIf="pgData.location">
+          <mat-icon>location_on</mat-icon>
+          {{ pgData.location }}
+        </mat-chip>
+        <mat-chip color="accent" *ngIf="pgData.contact">
+          <mat-icon>phone</mat-icon>
+          +91 {{ pgData.contact }}
+        </mat-chip>
+        <mat-chip color="primary" *ngIf="pgData.price">
+          <mat-icon>attach_money</mat-icon>
+          ₹{{ pgData.price }}/month
+        </mat-chip>
+        <mat-chip color="warn" *ngIf="pgData.rating">
+          <mat-icon>star</mat-icon>
+          {{ pgData.rating }}/5
+        </mat-chip>
+      </mat-chip-set>
+    </div>
+  
+    <!-- Description Section -->
+    <div class="pg-description">
+      <h3>Description:</h3>
+      <p>{{ pgData.description }}</p>
+    </div>
+  
+    <!-- Features Section -->
+    <div class="pg-features">
+      <h3>Features:</h3>
+      <mat-chip-set>
+        <mat-chip *ngIf="pgData.features.ac" color="accent">AC</mat-chip>
+        <mat-chip *ngIf="pgData.features.wifi" color="accent">Wi-Fi</mat-chip>
+        <mat-chip *ngIf="pgData.features.food" color="accent">Food</mat-chip>
+        <mat-chip *ngIf="pgData.features.laundry" color="accent">Laundry</mat-chip>
+      </mat-chip-set>
+    </div>
+  
+    <!-- Rating & Buttons Section -->
+    <div class="rating-actions">
+      <div class="rating">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+          <mat-icon>
+            {{
+              pgData.rating >= star
+                ? 'star'
+                : pgData.rating >= star - 0.5
+                ? 'star_half'
+                : 'star_outline'
+            }}
+          </mat-icon>
+        </ng-container>
+        <span>{{ pgData.rating }}</span>
+      </div>
+  
+      <div class="buttons">
+        <button mat-raised-button color="primary" (click)="bookNow(pgData)">
+          <mat-icon>book_online</mat-icon> Book Now
+        </button>
+        <button mat-stroked-button color="accent" (click)="contactOwner()">
+          <mat-icon>contact_mail</mat-icon> Contact Owner
+        </button>
+      </div>
+    </div>
+  </div>
+  

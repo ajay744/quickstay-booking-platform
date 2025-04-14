@@ -1,0 +1,13 @@
+<mat-sidenav-container class="owner-container">
+  <!-- Sidebar: Static, fixed on the side -->
+  <mat-sidenav class="owner-sidenav" mode="side" opened fixedInViewport>
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="owner-content">
+    <app-navbar></app-navbar>
+    <div class="owner-router">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

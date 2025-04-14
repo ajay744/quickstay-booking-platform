@@ -1,0 +1,82 @@
+
+.static-info {
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 5px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+  }
+}
+.booking-wrapper {
+  padding: 20px;
+}
+
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.booking-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  mat-card-header {
+    background-color: #f5f5f5;
+    padding: 16px;
+  }
+
+  .pg-image {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .pg-location {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .description {
+    margin: 10px 0;
+    font-size: 15px;
+    color: #444;
+  }
+
+  .features-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  mat-chip {
+    font-size: 13px;
+  }
+
+  mat-card-content p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  .status {
+    font-weight: bold;
+  }
+}

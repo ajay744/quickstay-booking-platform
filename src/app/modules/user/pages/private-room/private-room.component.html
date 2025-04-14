@@ -1,0 +1,61 @@
+<div class="girls-pg-container">
+  <h1>Private Room Listings</h1>
+  <p class="subtitle">
+    Comfortable, secure, and fully-equipped private rooms for individuals seeking personal space and privacy.
+  </p>
+
+  <!-- Search and Filter -->
+  <app-search-bar [(searchText)]="searchText" [(sortOption)]="sortOption"
+    [placeholder]="'Search Private Rooms by location'"></app-search-bar>
+
+  <!-- PG Listings Grid -->
+  <div class="pg-grid">
+    <mat-card class="pg-card" *ngFor="let pg of filteredPgList">
+      <img mat-card-image class="pg-image" [src]="pg.image" alt="{{ pg.name }}" />
+
+      <mat-card-content>
+        <h2>{{ pg.name }}</h2>
+        <p class="location">
+          <mat-icon>location_on</mat-icon> {{ pg.location }}, {{ pg.city }}
+        </p>
+        <p class="price">₹{{ pg.price }}/month</p>
+
+        <p class="desc">{{ pg.description }}</p>
+
+        <!-- Features -->
+        <div class="features">
+          <mat-chip *ngIf="pg.features.ac" color="accent" selected>AC</mat-chip>
+          <mat-chip *ngIf="pg.features.wifi" color="accent" selected>Wi-Fi</mat-chip>
+          <mat-chip *ngIf="pg.features.food" color="accent" selected>Food</mat-chip>
+          <mat-chip *ngIf="pg.features.laundry" color="accent" selected>Laundry</mat-chip>
+        </div>
+
+        <!-- Rating -->
+        <div class="rating">
+          <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
+            <mat-icon>
+              {{
+              pg.rating >= star
+              ? 'star'
+              : pg.rating >= star - 0.5
+              ? 'star_half'
+              : 'star_outline'
+              }}
+            </mat-icon>
+          </ng-container>
+          <span>{{ pg.rating }}</span>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact-info">
+          <p><mat-icon>phone</mat-icon> +91 {{ pg.contact }}</p>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="viewDetails(pg)">
+          view Details</button> 
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

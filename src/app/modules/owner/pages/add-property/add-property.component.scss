@@ -1,0 +1,55 @@
+.page-header {
+  padding: 1.5rem;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 0.5rem;
+    font-size: 24px;
+    color: #00796b;
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 600px;
+    color: #555;
+    font-size: 15px;
+  }
+}
+
+.property-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.property-card {
+  text-align: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  mat-icon {
+    font-size: 40px;
+    color: #00796b;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    margin: 0.3rem 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #37474f;
+  }
+
+  p {
+    font-size: 13px;
+    color: #666;
+    margin-top: 0.2rem;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  }
+}

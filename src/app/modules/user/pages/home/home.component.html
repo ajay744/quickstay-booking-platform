@@ -1,0 +1,127 @@
+<section class="intro mat-elevation-z2 mat-typography mat-app-background">
+    <div class="intro-content">
+      <h1>Welcome to QuickStay</h1>
+      <p>
+        Your trusted platform to discover verified and budget-friendly PGs, private, and shared rooms
+        across top cities. Whether you’re a student or working professional, we help you find your
+        second home with ease.
+      </p>
+      <mat-chip-listbox aria-label="QuickStay Features">
+        <mat-chip>🏠 Hassle-free PG Listings</mat-chip>
+        <mat-chip>🔍 Direct Owner Contacts</mat-chip>
+        <mat-chip>📍 Available in Major Cities</mat-chip>
+        <mat-chip>💬 Friendly Support (Coming Soon)</mat-chip>
+      </mat-chip-listbox>
+    </div>
+  </section>
+  
+  <div class="home-container">
+  
+    <!-- Popular Categories -->
+    <section class="categories">
+      <h2>Popular Categories</h2>
+      <div class="category-grid">
+        <mat-card class="category-card">
+          <a mat-button color="primary" routerLink='/user/boys-pg'>Boys PG</a>
+        </mat-card>
+        <mat-card class="category-card">
+          <a mat-button color="primary" routerLink='/user/girls-pg'>Girls PG</a>
+        </mat-card>
+        <mat-card class="category-card">
+          <a mat-button color="primary" routerLink='/user/shared-room'>Shared Rooms</a>
+        </mat-card>
+        <mat-card class="category-card">
+          <a mat-button color="primary" routerLink='/user/private-room'>Private Rooms</a>
+        </mat-card>
+      </div>
+    </section>
+  
+    <!-- Top Cities -->
+    <section class="top-cities">
+      <h2>Top Cities We Serve</h2>
+      <div class="city-grid">
+        <mat-chip-listbox aria-label="Top Cities">
+          <mat-chip>Indore</mat-chip>
+          <mat-chip>Bhopal</mat-chip>
+          <mat-chip>Pune</mat-chip>
+          <mat-chip>Bangalore</mat-chip>
+          <mat-chip>Delhi</mat-chip>
+          <mat-chip>Hyderabad</mat-chip>
+        </mat-chip-listbox>
+      </div>
+    </section>
+  
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <mat-card class="step">
+          <mat-icon>search</mat-icon>
+          <p>Search for PGs in your area</p>
+        </mat-card>
+        <mat-card class="step">
+          <mat-icon>visibility</mat-icon>
+          <p>View listings with full details</p>
+        </mat-card>
+        <mat-card class="step">
+          <mat-icon>send</mat-icon>
+          <p>Send booking request</p>
+        </mat-card>
+        <mat-card class="step">
+          <mat-icon>check_circle</mat-icon>
+          <p>Owner confirms & move in!</p>
+        </mat-card>
+      </div>
+    </section>
+  
+    <!-- Why Choose Us -->
+    <section class="why-us">
+      <h2>Why QuickStay?</h2>
+      <mat-chip-listbox aria-label="Why Choose QuickStay">
+        <mat-chip>
+          <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Verified Listings" />
+          Verified Listings
+        </mat-chip>
+        <mat-chip color="primary">
+          <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Direct Booking" />
+          Direct Booking With Owners
+        </mat-chip>
+        <mat-chip color="accent">
+          <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Web Interface" />
+          Easy-to-use Web Interface
+        </mat-chip>
+        <mat-chip color="warn">
+          <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Support" />
+          24x7 Support (Coming Soon)
+        </mat-chip>
+      </mat-chip-listbox>
+    </section>
+  
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <h2>What Our Users Say</h2>
+      <div class="testimonial-grid">
+        <mat-card class="testimonial-card">
+          <p>"QuickStay made it super easy to find a PG when I moved for college. Great UI!"</p>
+          <h4>- Riya, Student</h4>
+        </mat-card>
+        <mat-card class="testimonial-card">
+          <p>"As an owner, I love how simple it is to manage bookings and tenants."</p>
+          <h4>- Mr. Sharma, PG Owner</h4>
+        </mat-card>
+        <mat-card class="testimonial-card">
+          <p>"I found a private room in 10 minutes. Smooth experience all the way!"</p>
+          <h4>- Akash, Working Professional</h4>
+        </mat-card>
+      </div>
+    </section>
+  
+    <!-- Call to Action -->
+    <section class="cta mat-elevation-z2">
+      <h2>Are You a PG Owner?</h2>
+      <p>List your property today and reach 1000s of tenants!</p>
+      <button mat-raised-button color="primary" routerLink="/owner">List My PG</button>
+    </section>
+  
+  </div>
+  

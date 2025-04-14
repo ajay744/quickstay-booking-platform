@@ -1,0 +1,31 @@
+<mat-toolbar class="navbar">
+  <span class="logo">QuickStay</span>
+
+  <span class="spacer"></span>
+  <span class="example-spacer"></span>
+
+
+  <nav class="nav-links">
+    <a mat-button routerLink="/user/home" routerLinkActive="active-link">Home</a>
+    <a mat-button routerLink="/user/boys-pg" routerLinkActive="active-link">Boys PG</a>
+    <a mat-button routerLink="/user/girls-pg" routerLinkActive="active-link">Girls PG</a>
+    <a mat-button routerLink="/user/private-room" routerLinkActive="active-link">Private Room</a>
+    <a mat-button routerLink="/user/shared-room" routerLinkActive="active-link">Shared Room</a>
+    <a mat-button routerLink="/user/dashboard" routerLinkActive="active-link">Dashboard</a>
+  </nav>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="account-button">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="navigateToProfile()">
+      <mat-icon>person</mat-icon>
+      <span>Profile</span>
+    </button>
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

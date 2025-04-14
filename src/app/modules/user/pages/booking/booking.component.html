@@ -1,0 +1,44 @@
+
+
+<!-- Static Info Section -->
+<div class="static-info">
+  <h1>Your Booked PGs </h1>
+  <p>Here you can find all your PG bookings with complete details including location, facilities, and status.</p>
+</div>
+<div *ngIf="bookingData.length > 0; else noBookings" class="booking-wrapper">
+  <div class="card-grid">
+    <mat-card *ngFor="let booking of bookingData" class="booking-card mat-elevation-z3">
+      <mat-card-header>
+        <mat-card-title>{{ booking.pgName }}</mat-card-title>
+        <mat-card-subtitle>{{ booking.pgType }} | ₹{{ booking.price }}/month</mat-card-subtitle>
+      </mat-card-header>
+
+      <img mat-card-image [src]="booking.image" alt="PG Image" class="pg-image" />
+
+      <mat-card-content>
+        <p class="pg-location">{{ booking.location }}, {{ booking.city }}</p>
+        <p class="description">{{ booking.description }}</p>
+
+        <mat-chip-set class="features-chips" *ngIf="booking.features">
+          <mat-chip *ngIf="booking.features.cleaning" color="primary" selected> Cleaning</mat-chip>
+          <mat-chip *ngIf="booking.features.ac" color="accent" selected> AC</mat-chip>
+          <mat-chip *ngIf="booking.features.wifi" color="primary" selected> WiFi</mat-chip>
+          <mat-chip *ngIf="booking.features.food" color="warn" selected> Food</mat-chip>
+          <mat-chip *ngIf="booking.features.laundry" color="accent" selected> Laundry</mat-chip>
+        </mat-chip-set>
+
+        <p><strong>Rating:</strong> {{ booking.rating }} ⭐</p>
+        <p><strong>Booked By:</strong> {{ booking.userName }} (ID: {{ booking.userId }})</p>
+        <p><strong>Contact:</strong> {{ booking.contact }}</p>
+        <p><strong>Date:</strong> {{ booking.date | date: 'medium' }}</p>
+        <p><strong>Status:</strong> 
+          <mat-chip color="primary" selected>{{ booking.status }}</mat-chip>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<ng-template #noBookings>
+  <p>No bookings found.</p>
+</ng-template>

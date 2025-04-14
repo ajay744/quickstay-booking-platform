@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h2>Add a New Property</h2>
+  <p>Select the type of property you'd like to list. You can manage and edit these later from your dashboard.</p>
+</div>
+
+<div class="property-card-container">
+  <mat-card class="property-card" (click)="navigateTo('boys-pg')">
+    <mat-icon>king_bed</mat-icon>
+    <h3>Boys PG</h3>
+    <p>Ideal for male students or working professionals with shared or private room options.</p>
+  </mat-card>
+
+  <mat-card class="property-card" (click)="navigateTo('girls-pg')">
+    <mat-icon>bedroom_child</mat-icon>
+    <h3>Girls PG</h3>
+    <p>Safe and comfortable accommodation tailored for female tenants.</p>
+  </mat-card>
+
+  <mat-card class="property-card" (click)="navigateTo('private-room')">
+    <mat-icon>home</mat-icon>
+    <h3>Private Room</h3>
+    <p>Offer complete privacy with single-room setups in your property.</p>
+  </mat-card>
+
+  <mat-card class="property-card" (click)="navigateTo('shared-room')">
+    <mat-icon>group</mat-icon>
+    <h3>Shared Room</h3>
+    <p>Let tenants share rooms at lower prices—great for friends or budget stays.</p>
+  </mat-card>
+</div>

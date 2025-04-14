@@ -1,0 +1,32 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+  
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      color: #fff;
+  
+      .footer-links {
+        a {
+          color: white;
+          font-weight: 500;
+          margin-left: 1rem;
+          text-transform: uppercase;
+          font-size: 0.8rem;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  

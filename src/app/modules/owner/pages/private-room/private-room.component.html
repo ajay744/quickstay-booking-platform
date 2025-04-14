@@ -1,0 +1,99 @@
+<mat-card class="pg-form-card">
+  <mat-card-title class="form-title">Add Private Room</mat-card-title>
+  <mat-divider></mat-divider>
+
+  <form [formGroup]="pgForm" (ngSubmit)="onSubmit()" class="pg-form">
+
+    <!-- Basic Details -->
+    <div class="form-section">
+      <h3><mat-icon>info</mat-icon> Basic Details</h3>
+
+      <mat-form-field appearance="outline">
+        <mat-label>PG Name</mat-label>
+        <input matInput formControlName="name" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Location</mat-label>
+        <input matInput formControlName="location" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>City</mat-label>
+        <input matInput formControlName="city" required />
+      </mat-form-field>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Price & Media -->
+    <div class="form-section">
+      <h3><mat-icon>attach_money</mat-icon> Rent & Media</h3>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Monthly Rent (₹)</mat-label>
+        <input matInput type="number" formControlName="price" required />
+      </mat-form-field>
+    </div>
+
+    <div class="image-upload-section">
+      <label for="imageUpload">Select Image:</label>
+      <input type="file" id="imageUpload" (change)="onImageSelected($event)" accept="image/*" />
+
+      <div *ngIf="imagePreview" class="preview">
+        <p>Preview:</p>
+        <img [src]="imagePreview" alt="Selected PG Image" />
+      </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Features -->
+    <div class="form-section">
+      <h3><mat-icon>check_circle</mat-icon> Features</h3>
+
+      <div formGroupName="features" class="checkbox-row">
+        <mat-checkbox formControlName="ac">AC</mat-checkbox>
+        <mat-checkbox formControlName="wifi">Wi-Fi</mat-checkbox>
+        <mat-checkbox formControlName="food">Food</mat-checkbox>
+        <mat-checkbox formControlName="laundry">Laundry</mat-checkbox>
+      </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Description -->
+    <div class="form-section">
+      <h3><mat-icon>description</mat-icon> Description</h3>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description" rows="3"></textarea>
+      </mat-form-field>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Contact & Rating -->
+    <div class="form-section">
+      <h3><mat-icon>call</mat-icon> Contact Info</h3>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Rating (1 to 5)</mat-label>
+        <input matInput type="number" step="0.1" min="1" max="5" formControlName="rating" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Contact Number</mat-label>
+        <input matInput type="tel" formControlName="contact" required />
+      </mat-form-field>
+    </div>
+
+    <!-- Submit -->
+    <div class="form-actions">
+      <button mat-raised-button color="primary" type="submit" [disabled]="pgForm.invalid || isSubmitting">
+        {{ isSubmitting ? 'Submitting...' : 'Submit' }}
+      </button>
+    </div>
+
+  </form>
+</mat-card>

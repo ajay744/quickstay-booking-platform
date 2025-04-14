@@ -1,0 +1,73 @@
+.pg-form-card {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #3f51b5;
+}
+
+.form-section {
+  margin: 20px 0;
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.checkbox-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+.image-upload-section {
+  margin: 16px 0;
+
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  input[type='file'] {
+    margin-bottom: 12px;
+  }
+
+  .preview {
+    margin-top: 12px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  }
+}
